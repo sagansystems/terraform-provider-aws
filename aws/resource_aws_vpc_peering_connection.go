@@ -49,6 +49,14 @@ func resourceAwsVpcPeeringConnection() *schema.Resource {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
+			"cidr_block": {
+				Type:     schema.TypeString,
+				Computed: true,
+			},
+			"peer_cidr_block": {
+				Type:     schema.TypeString,
+				Computed: true,
+			},
 			"accepter":  vpcPeeringConnectionOptionsSchema(),
 			"requester": vpcPeeringConnectionOptionsSchema(),
 			"tags":      tagsSchema(),
